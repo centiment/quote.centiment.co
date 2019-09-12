@@ -500,7 +500,6 @@
         var hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
         var hutk_value = '';
         if (hutk_matches) hutk_value = hutk_matches[2];
-        else hutk_value = "HUTK_not_set_in_browser"
         const urlParams = new URLSearchParams(window.location.search);
         const gclid_value = urlParams.get('gclid');
         const utm_matchtype_value = urlParams.get('utm_matchtype');
