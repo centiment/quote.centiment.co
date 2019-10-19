@@ -526,7 +526,7 @@
                     "&gclid=" + gclid_value +
                     "&utm_matchtype=" + utm_matchtype_value +
                     "&name=USA" +
-                    "&page=" + encodeURIComponent(window.location.href); // + "&" + urlExtra;
+                    "&page=" + encodeURIComponent(window.location.href.split('?')[0]); // + "&" + urlExtra; 
                 $('#5d8b102a3d530177e478d45a').attr('data-url', original_url);
                 initIframe('5d8b102a3d530177e478d45a');
                 togglePopup('5d8b102a3d530177e478d45a');
