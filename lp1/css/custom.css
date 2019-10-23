@@ -1,9 +1,0 @@
-.w-embed {
-    max-height: 100vh;
-}
-
-@media (max-width:1535px) {
-    .w-embed {
-        max-height: 500px;
-    }
-}
