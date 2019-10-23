@@ -1806,6 +1806,7 @@ a {
   margin-top: 45px;
   margin-bottom: 25px;
   font-family: futura-pt-bold, sans-serif;
+  color: #036;
   font-size: 55px;
   line-height: 1.4em;
   font-weight: 700;
@@ -4209,9 +4210,18 @@ a {
   margin-top: 45px;
   margin-bottom: 25px;
   font-family: futura-pt-bold, sans-serif;
-  font-size: 45px;
+  color: #036;
+  font-size: 42px;
   line-height: 1.4em;
   font-weight: 700;
+}
+
+.text-span {
+  color: #4e5bf9;
+}
+
+.text-span-2 {
+  color: #4e5bf9;
 }
 
 html.w-mod-js *[data-ix="fade-in-on-load"] {
