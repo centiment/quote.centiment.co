@@ -4370,7 +4370,7 @@ a {
   margin-bottom: 25px;
   font-family: futura-pt-bold, sans-serif;
   color: #036;
-  font-size: 48px;
+  font-size: 50px;
   line-height: 1.4em;
   font-weight: 700;
 }
@@ -4407,6 +4407,23 @@ a {
 }
 
 .text-span-14 {
+  color: #4e5bf9;
+}
+
+.text-span-15 {
+  color: #4e5bf9;
+  font-size: 48px;
+}
+
+.text-span-16 {
+  color: #4e5bf9;
+}
+
+.text-span-17 {
+  color: #4e5bf9;
+}
+
+.text-span-18 {
   color: #4e5bf9;
 }
 
