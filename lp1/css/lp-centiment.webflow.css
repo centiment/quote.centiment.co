@@ -1807,7 +1807,7 @@ a {
   margin-bottom: 25px;
   font-family: futura-pt-bold, sans-serif;
   color: #036;
-  font-size: 55px;
+  font-size: 46px;
   line-height: 1.4em;
   font-weight: 700;
 }
@@ -1828,7 +1828,7 @@ a {
 .hero-sub {
   font-family: futura-pt, sans-serif;
   color: rgba(63, 63, 63, 0.9);
-  font-size: 20px;
+  font-size: 19px;
   line-height: 25px;
   font-weight: 400;
 }
@@ -4211,7 +4211,7 @@ a {
   margin-bottom: 25px;
   font-family: futura-pt-bold, sans-serif;
   color: #036;
-  font-size: 42px;
+  font-size: 50px;
   line-height: 1.4em;
   font-weight: 700;
 }
@@ -4221,6 +4221,192 @@ a {
 }
 
 .text-span-2 {
+  color: #036;
+}
+
+.text-span-3 {
+  color: #036;
+}
+
+.text-span-4 {
+  color: #4e5bf9;
+}
+
+.text-span-5 {
+  font-size: 48px;
+}
+
+.text-span-6 {
+  color: #4e5bf9;
+  font-size: 45px;
+}
+
+.text-span-7 {
+  color: #036;
+  font-size: 46px;
+}
+
+.text-span-8 {
+  color: #4e5bf9;
+}
+
+.text-span-9 {
+  color: #4e5bf9;
+}
+
+.text-span-10 {
+  font-size: 65px;
+}
+
+.text-span-11 {
+  color: #4e5bf9;
+}
+
+.text-span-12 {
+  color: #036;
+  font-size: 45px;
+}
+
+.hero-1 {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  font-family: futura-pt-bold, sans-serif;
+  color: #4e5bf9;
+  font-size: 50px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+.hero-main {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  font-family: futura-pt-bold, sans-serif;
+  color: #036;
+  font-size: 60px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+.hero-sub-main {
+  font-family: futura-pt, sans-serif;
+  color: rgba(63, 63, 63, 0.9);
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.hero-2 {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  font-family: futura-pt-bold, sans-serif;
+  color: #4e5bf9;
+  font-size: 46px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+.hero-sub-2 {
+  font-family: futura-pt, sans-serif;
+  color: rgba(63, 63, 63, 0.9);
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.hero-3 {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  font-family: futura-pt-bold, sans-serif;
+  color: #036;
+  font-size: 46px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+.hero-sub-3 {
+  font-family: futura-pt, sans-serif;
+  color: rgba(63, 63, 63, 0.9);
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.hero-sub-1 {
+  font-family: futura-pt, sans-serif;
+  color: rgba(63, 63, 63, 0.9);
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.hero-4 {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  font-family: futura-pt-bold, sans-serif;
+  color: #036;
+  font-size: 48px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+.hero-sub-4 {
+  font-family: futura-pt, sans-serif;
+  color: rgba(63, 63, 63, 0.9);
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.hero-sub-branded {
+  font-family: futura-pt, sans-serif;
+  color: rgba(63, 63, 63, 0.9);
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.hero-branded-1 {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  font-family: futura-pt-bold, sans-serif;
+  color: #036;
+  font-size: 48px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+.hero-sub-branded-1 {
+  font-family: futura-pt, sans-serif;
+  color: rgba(63, 63, 63, 0.9);
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.hero-branded-2 {
+  margin-top: 45px;
+  margin-bottom: 25px;
+  font-family: futura-pt-bold, sans-serif;
+  color: #036;
+  font-size: 55px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+
+.hero-sub-branded-2 {
+  font-family: futura-pt, sans-serif;
+  color: rgba(63, 63, 63, 0.9);
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.text-span-13 {
+  color: #036;
+  font-size: 48px;
+}
+
+.text-span-14 {
   color: #4e5bf9;
 }
 
@@ -4888,6 +5074,27 @@ html.w-mod-js *[data-ix="mockup-move"] {
   .hero-branded {
     margin-top: 0px;
   }
+  .hero-1 {
+    margin-top: 0px;
+  }
+  .hero-main {
+    margin-top: 0px;
+  }
+  .hero-2 {
+    margin-top: 0px;
+  }
+  .hero-3 {
+    margin-top: 0px;
+  }
+  .hero-4 {
+    margin-top: 0px;
+  }
+  .hero-branded-1 {
+    margin-top: 0px;
+  }
+  .hero-branded-2 {
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -5453,6 +5660,27 @@ html.w-mod-js *[data-ix="mockup-move"] {
     padding-right: 10px;
   }
   .hero-branded {
+    font-size: 32px;
+  }
+  .hero-1 {
+    font-size: 32px;
+  }
+  .hero-main {
+    font-size: 32px;
+  }
+  .hero-2 {
+    font-size: 32px;
+  }
+  .hero-3 {
+    font-size: 32px;
+  }
+  .hero-4 {
+    font-size: 32px;
+  }
+  .hero-branded-1 {
+    font-size: 32px;
+  }
+  .hero-branded-2 {
     font-size: 32px;
   }
 }
