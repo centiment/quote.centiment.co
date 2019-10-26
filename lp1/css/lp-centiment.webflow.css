@@ -4212,7 +4212,7 @@ a {
   font-family: futura-pt-bold, sans-serif;
   color: #036;
   font-size: 50px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-weight: 700;
 }
 
@@ -4271,10 +4271,14 @@ a {
   margin-top: 45px;
   margin-bottom: 25px;
   font-family: futura-pt-bold, sans-serif;
-  color: #4e5bf9;
+  color: #036;
   font-size: 50px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-weight: 700;
+}
+
+.hero-1.heading-2 {
+  font-size: 60px;
 }
 
 .hero-main {
@@ -4282,8 +4286,8 @@ a {
   margin-bottom: 25px;
   font-family: futura-pt-bold, sans-serif;
   color: #036;
-  font-size: 60px;
-  line-height: 1.4em;
+  font-size: 65px;
+  line-height: 1.2em;
   font-weight: 700;
 }
 
@@ -4301,7 +4305,7 @@ a {
   font-family: futura-pt-bold, sans-serif;
   color: #4e5bf9;
   font-size: 46px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-weight: 700;
 }
 
@@ -4319,7 +4323,7 @@ a {
   font-family: futura-pt-bold, sans-serif;
   color: #036;
   font-size: 46px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-weight: 700;
 }
 
@@ -4345,7 +4349,7 @@ a {
   font-family: futura-pt-bold, sans-serif;
   color: #036;
   font-size: 48px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-weight: 700;
 }
 
@@ -4371,7 +4375,7 @@ a {
   font-family: futura-pt-bold, sans-serif;
   color: #036;
   font-size: 50px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-weight: 700;
 }
 
@@ -4389,7 +4393,7 @@ a {
   font-family: futura-pt-bold, sans-serif;
   color: #036;
   font-size: 55px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-weight: 700;
 }
 
@@ -4424,6 +4428,10 @@ a {
 }
 
 .text-span-18 {
+  color: #4e5bf9;
+}
+
+.text-span-19 {
   color: #4e5bf9;
 }
 
