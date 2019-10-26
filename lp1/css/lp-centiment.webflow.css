@@ -5098,9 +5098,13 @@ html.w-mod-js *[data-ix="mockup-move"] {
   }
   .hero-branded {
     margin-top: 0px;
+    font-size: 45px;
   }
   .hero-1 {
     margin-top: 0px;
+  }
+  .hero-1.heading-2 {
+    font-size: 55px;
   }
   .hero-main {
     margin-top: 0px;
@@ -5116,9 +5120,11 @@ html.w-mod-js *[data-ix="mockup-move"] {
   }
   .hero-branded-1 {
     margin-top: 0px;
+    font-size: 45px;
   }
   .hero-branded-2 {
     margin-top: 0px;
+    font-size: 55px;
   }
 }
 
@@ -5685,10 +5691,22 @@ html.w-mod-js *[data-ix="mockup-move"] {
     padding-right: 10px;
   }
   .hero-branded {
+    font-size: 40px;
+  }
+  .text-span-6 {
+    font-size: 42px;
+  }
+  .text-span-7 {
     font-size: 32px;
+  }
+  .text-span-12 {
+    font-size: 42px;
   }
   .hero-1 {
     font-size: 32px;
+  }
+  .hero-1.heading-2 {
+    font-size: 45px;
   }
   .hero-main {
     font-size: 32px;
@@ -6295,7 +6313,31 @@ html.w-mod-js *[data-ix="mockup-move"] {
   .text-block-28-copy {
     display: block;
     padding-right: 10px;
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .hero-branded {
+    font-size: 28px;
+  }
+  .text-span-6 {
+    font-size: 30px;
+  }
+  .text-span-12 {
+    font-size: 30px;
+  }
+  .hero-1 {
+    font-size: 30px;
+  }
+  .hero-1.heading-2 {
+    font-size: 32px;
+  }
+  .hero-2 {
+    font-size: 32px;
+  }
+  .hero-branded-1 {
+    font-size: 26px;
+  }
+  .hero-branded-2 {
+    font-size: 32px;
   }
 }
 
