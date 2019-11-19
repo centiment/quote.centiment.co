@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        const referrer = document.referrer;
+        const query = referrer.split('?')[1];
+        // Append URL paramters to Respondent CTA
+        var sh_url = 'https://lp.surveyhoney.com/lp1/?';
+        var params = [];
+        var items = query.split("&");
+        for (var index = 0; index < items.length; index++) {
+            params = items[index].split("=");
+            if (params[0] == "") continue;
+            if (params[0] == "utm_campaign") {
+                sh_url += "utm_campaign" + "=" + "cta-respondent&";
+                continue;
+            }
+            sh_url += params[0] + "=" + params[1] + "&";
+        }
+        if (!sh_url.includes('utm_campaign')) sh_url += "utm_campaign" + "=" + "cta-respondent&";
+        if (!sh_url.includes('utm_medium')) sh_url += "utm_medium" + "=" + "lp-quote&";
+        if (!sh_url.includes('utm_source')) sh_url += "utm_source" + "=" + "respondent-traffic&";
+        window.location.replace(sh_url);
+    </script>
+</body>
+
+</html>
