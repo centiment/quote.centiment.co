@@ -16,17 +16,19 @@
 
     <script type="text/javascript">
 
+        var original_url = $('#5d8b102a3d530177e478d45a').attr('data-url');
         var hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
         var hutk_value = '';
         if (hutk_matches) hutk_value = hutk_matches[2];
         const urlParams = new URLSearchParams(window.location.search);
         const gclid_value = urlParams.get('gclid');
         const utm_matchtype_value = urlParams.get('utm_matchtype');
+        const page = urlParams.get('referrer');
         original_url += "&hutk=" + hutk_value +
                     "&gclid=" + gclid_value +
                     "&utm_matchtype=" + utm_matchtype_value +
                     "&name=USA" +
-                    "&page=" + encodeURIComponent(window.location.href); // + "&" + urlExtra; 
+                    "&page=" + encodeURIComponent(page); // + "&" + urlExtra; 
         $('#5d8b102a3d530177e478d45a').attr('data-url', original_url);
         initIframe('5d8b102a3d530177e478d45a');
     </script>
