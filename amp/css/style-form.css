@@ -297,8 +297,8 @@ a {
 }
 
 .dots {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.8)), to(hsla(0, 0%, 100%, 0.8))), url('http://localhost/amp-build/images/circle-2.svg');
-    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.8)), url('http://localhost/amp-build/images/circle-2.svg');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.8)), to(hsla(0, 0%, 100%, 0.8))), url('images/circle-2.svg');
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.8)), url('images/circle-2.svg');
     background-position: 0px 0px, 0px 0px;
     background-size: auto, 8px;
     background-attachment: scroll, scroll;
