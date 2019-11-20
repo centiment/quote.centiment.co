@@ -48,7 +48,7 @@
     <script type="application/json">
         {
           "vars": {
-            "page": "https://quote.centiment.co/amp/"
+            "pageURL": "https://quote.centiment.co/amp/"
           }
         }
         </script>
@@ -86,15 +86,17 @@
                 </div>
                 <div> <amp-lightbox id="my-lightbox" layout="nodisplay">
                           <div class="lightbox" on="tap:my-lightbox.close" role="button" tabindex="0">
-                                 <amp-youtube
+                               <div style="width:940px;">  <amp-youtube
                                         data-videoid="QfMNN75_Ylw"
                                         data-param-modestbranding="0" 
                                         data-param-showinfo="0"
                                         data-param-rel="0"
+                                        layout="responsive"
                                         width="941"
                                         height="530">
                                         <amp-img  src="images/video-overlay.jpg" width="941" height="530" placeholder alt="" layout="intrinsic" class="image-8">
                                       </amp-youtube>
+                                    </div>
                           </div>
                         </amp-lightbox>
                       </div>
