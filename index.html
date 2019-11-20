@@ -12,6 +12,124 @@
         window.location.replace(url);
     </script>
 
+
+    <script defer src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        function onYouTubeIframeAPIReady() {
+            console.log("Ready");
+            player = new YT.Player('video', {
+                events: {
+                    'onStateChange': onYouTubePlayerStateChange
+                }
+            });
+            player.addEventListener('onStateChange', function(e) {
+                console.log('State is:', e.data);
+            });
+        }
+
+        function onYouTubePlayerStateChange(event) {
+            switch (event.data) {
+                case YT.PlayerState.ENDED:
+                    document.getElementById('video-close').click();
+                    document.getElementById('calculate_cost').click();
+
+                    player = new YT.Player('video', {
+                        events: {
+                            'onStateChange': onYouTubePlayerStateChange
+                        }
+                    });
+                    break;
+            }
+        }
+    </script>
+    <script>
+        $(function() {
+            $('#video-open').click(function(e) {
+                // set the video src to autoplay and not to show related video. 
+                $("#video").attr('src', 'https://www.youtube.com/embed/QfMNN75_Ylw?autoplay=1&modestbranding=1&showinfo=0&rel=0&enablejsapi=1');
+                $("#video").attr('style', "display: visible;");
+            })
+            $('#video-close').click(function(e) {
+                // a poor man's stop video
+                $("#video").attr('src', 'https://www.youtube.com/embed/QfMNN75_Ylw');
+            })
+        })
+    </script>
+
+
+
+
+    <!-- Embeded Code starts here -->
+    <!--  Moin Khan  -->
+    <!--  30-August-2019  -->
+    <!--  Centiment  -->
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" src="//js.hs-scripts.com/1998880.js"></script>
+    <!-- End of HubSpot Embed Code -->
+
+    <!--   Outgrow Iframe starts  -->
+    <div id='5d8b102a3d530177e478d45a' style="display: none;" data-embedCookieDays='10' data-embedScheduling='false' data-embedTimed='true' data-embedExit='false' data-embedTimeFormat='0' data-embedTimeValue='5' data-embedBorderRadius='2' data-embedFontSize='18'
+        data-textcolor='#ffffff' data-bgcolor='#00C262' data-prop='outgrow-p' data-type='outgrow-b' data-url='https://centiment.outgrow.us/5d8b102a3d530177e478d45a?q=1' data-text='Calculate Your Cost'></div>
+    <script src='https://dyv6f9ner1ir9.cloudfront.net/assets/js/nploader.js'></script>
+    <!--  Outgrow Iframe ends  -->
+
+    <!-- HubSpot Call-to-Action View Code  -->
+    <span class="hs-cta-wrapper" style="display:none" id="hs-cta-wrapper-2cdc8bf7-93cb-47c3-bfe2-39ccaa562289"><span class="hs-cta-node hs-cta-2cdc8bf7-93cb-47c3-bfe2-39ccaa562289" id="hs-cta-2cdc8bf7-93cb-47c3-bfe2-39ccaa562289"><!-- [if lte IE 8]><div id="hs-cta-ie-element"></div><![endif] --><a href="https://cta-redirect.hubspot.com/cta/redirect/1998880/2cdc8bf7-93cb-47c3-bfe2-39ccaa562289"><img class="hs-cta-img" id="hs-cta-img-2cdc8bf7-93cb-47c3-bfe2-39ccaa562289" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1998880/2cdc8bf7-93cb-47c3-bfe2-39ccaa562289.png" alt="Calculate your Cost"></a></span>
+    <script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script>
+    <script type="text/javascript">
+        hbspt.cta.load(1998880, '2cdc8bf7-93cb-47c3-bfe2-39ccaa562289', {});
+    </script>
+    </span>
+    <!--  end HubSpot Call-to-Action View Code  -->
+
+
+    <!--  HubSpot Call-to-Action Click Code  -->
+    <iframe id="cta_frame" style="width: 1px; height: 1px; display: none"></iframe>
+    <!--  end HubSpot Call-to-Action Click Code  -->
+
+    <!--  Pass Variables  -->
+    <script type="text/javascript">
+        //
+        // Author: Moin Khan
+        // Dated:  30-August-2019
+        // Centiment
+        //
+        function downloadJSAtOnload() {
+            //prevent pre click
+            $('.calc-cost').addClass('calc-cost-ga');
+            //click tracking
+            $('.calc-cost').on('click', function(event) {
+                var hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
+                var hutk_value = '';
+                if (hutk_matches) hutk_value = hutk_matches[2];
+                const urlParams = new URLSearchParams(window.location.search);
+                const gclid_value = urlParams.get('gclid');
+                const utm_matchtype_value = urlParams.get('utm_matchtype');
+                original_url += "&hutk=" + hutk_value +
+                    "&gclid=" + gclid_value +
+                    "&utm_matchtype=" + utm_matchtype_value +
+                    "&name=USA" +
+                    "&page=" + encodeURIComponent(window.location.href); // + "&" + urlExtra; 
+                $('#5d8b102a3d530177e478d45a').attr('data-url', original_url);
+                initIframe('5d8b102a3d530177e478d45a');
+                togglePopup('5d8b102a3d530177e478d45a');
+                //make hub cta call
+                var ifrm = document.getElementById("cta_frame");
+                hub_cta = "https://cms2.hubspot.com/ctas/v2/public/cs/c/?cta_guid=b718a11a-340d-4ed5-8e96-99ca8d3001d6&placement_guid=2cdc8bf7-93cb-47c3-bfe2-39ccaa562289&portal_id=1998880&canon=" + encodeURI(window.location.href.split('?')[0]) + "&redirect_url=APefjpEuIFhfuBlJ2aXcu8D5Ez2r4vzQxfYQ6CG52yA8UttAlQGbmU5zEMHbNlFR7GdCOGfUzIjcpqmgkeqv_3vL0F6v5NKFuela86Hv-ZC-KmIxwfQ0LLClvTHseq22fDGV0K2eWg_Hy837GPajIi7myXMW00vOw7K76N5JKW1R1qnup5FJWoBNZVU0dLjgq1ZY7V2aND1YEKJoNPNIHOz7o8tZrpkB5tAKfftoiosh3hJ-Kh9a2oxOoCFt2LKS6eSIFJQRKc72&click=345a1136-b4e7-4efa-8564-b7c9bd5ab68c&hsutk=e40f8efd534c51ca52e3c72cee99c7c0&signature=AAH58kG-9nBLSs3QmYV4hBqko-UmDje4Hg&__hstc=208670285.e40f8efd534c51ca52e3c72cee99c7c0.1567177143804.1567177143804.1567182637165.2&__hssc=208670285.4.1567182637165&__hsfp=226280184";
+                if (!ifrm.getAttribute("src")) ifrm.setAttribute("src", hub_cta);
+            });
+        }
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        else window.onload = downloadJSAtOnload;
+        var original_url = $('#5d8b102a3d530177e478d45a').attr('data-url');
+    </script>
+
+
 </body>
+
+
 
 </html>
