@@ -10,7 +10,9 @@
         const referrer = document.referrer;
         const query = referrer.split('?')[1] || '';
         var url = 'lead-gen?' + query + '&referrer=' + encodeURIComponent(referrer);
-        window.location.replace(url);
+        // window.location.replace(url);
+        console.log(url);
+        console.log(referrer);
     </script>
 </head>
 
