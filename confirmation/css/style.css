@@ -725,6 +725,7 @@ a {
     -ms-flex-align: center;
     align-items: center;
     padding-top: 40px;
+    padding-bottom: 80px;
 }
 
 @media (min-width: 767px){
@@ -769,7 +770,7 @@ a {
 
 @media (max-width: 479px) {
     .text-block-29 {
-        font-size: 28px;
+        font-size: 38px;
     }
     .text-block-30 {
         font-size: 25px;
