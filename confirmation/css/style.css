@@ -772,6 +772,12 @@ a {
     }
 }
 
+@media (max-width: 767px){
+    .text-message{
+        margin-top: -180px; 
+    }
+    
+}
 
 /*! CSS Used fontfaces */
 
