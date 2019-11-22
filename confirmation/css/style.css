@@ -725,9 +725,8 @@ a {
     -ms-flex-align: center;
     align-items: center;
     padding-top: 40px;
-    padding-bottom: 80px;
+    
 }
-
 @media (min-width: 767px){
     .dots-bg-left{
         padding-top: 100px; 
@@ -765,6 +764,9 @@ a {
     }
     .dots-bg-left {
         padding-bottom: 0px;
+    }
+    .text-message{
+        padding-bottom: 80px;
     }
 }
 
