@@ -208,7 +208,7 @@ h1 {
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .image-2 {
@@ -586,7 +586,20 @@ a {
         font-size: 14px;
     }
 }
+.bottom-logo{
+    margin-left: -10px;
+}
+@media (max-width:767px){
+    .bottom-logo{
+        margin-left: -20px;
+    }
+}
 
+@media (max-width:1182px) {
+    .section.footer
+    {padding-right: 5%; padding-left: 5%;
+    }
+}        
 
 /*! CSS Used from: Embedded */
 
