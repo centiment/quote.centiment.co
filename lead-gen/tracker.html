@@ -11,12 +11,12 @@
         function downloadJSAtOnload() {
             const urlParams = new URLSearchParams(window.location.search);
             var query = "";
-            query += (urlParams.get('utm_source')) ? ("utm_source=" + urlParams.get('utm_source')) : ("");
-            query += (urlParams.get('utm_medium')) ? ("utm_medium=" + urlParams.get('utm_medium')) : ("");
-            query += (urlParams.get('utm_campaign')) ? ("utm_campaign=" + urlParams.get('utm_campaign')) : ("");
-            query += (urlParams.get('utm_term')) ? ("utm_term=" + urlParams.get('utm_term')) : ("");
-            query += (urlParams.get('utm_matchtype')) ? ("utm_matchtype=" + urlParams.get('utm_matchtype')) : ("");
-            query += (urlParams.get('referrer')) ? ("referrer=" + urlParams.get('referrer')) : ("");
+            query += (urlParams.get('utm_source')) ? ("utm_source=" + urlParams.get('utm_source') + "&") : ("");
+            query += (urlParams.get('utm_medium')) ? ("utm_medium=" + urlParams.get('utm_medium') + "&") : ("");
+            query += (urlParams.get('utm_campaign')) ? ("utm_campaign=" + urlParams.get('utm_campaign') + "&") : ("");
+            query += (urlParams.get('utm_term')) ? ("utm_term=" + urlParams.get('utm_term') + "&") : ("");
+            query += (urlParams.get('utm_matchtype')) ? ("utm_matchtype=" + urlParams.get('utm_matchtype') + "&") : ("");
+            query += (urlParams.get('referrer')) ? ("referrer=" + urlParams.get('referrer') + "&") : ("");
             query += (urlParams.get('gclid')) ? ("gclid=" + urlParams.get('gclid')) : ("");
             var url = '../lead-gen?' + query;
             window.location.replace(url);
