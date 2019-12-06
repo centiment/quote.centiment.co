@@ -7,7 +7,7 @@
     <script>
         const referrer = document.referrer;
         const query = referrer.split('?')[1] || '';
-        var url = 'tracker.html?' + query + '&referrer=' + encodeURIComponent(referrer);
+        var url = 'tracker?' + query + '&referrer=' + encodeURIComponent(referrer);
         window.location.replace(url);
     </script>
 </head>
