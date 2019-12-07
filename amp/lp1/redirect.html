@@ -4,21 +4,11 @@
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     <meta charset="utf-8">
     <title>Centiment | Survey your target audience</title>
-    <!--  Start of HubSpot Embed Code  -->
-    <script type="text/javascript" id="hs-script-loader" async=false defer=false src="https://js.hs-scripts.com/1998880.js"></script>
-    <!--  End of HubSpot Embed Code  -->
-    <script type="text/javascript">
-        function downloadJSAtOnload() {
-            const referrer = document.referrer;
-            const query = referrer.split('?')[1] || '';
-            var url = 'lead-gen?' + query + '&referrer=' + encodeURIComponent(referrer);
-            window.location.replace(url);
-        }
-        if (window.addEventListener)
-            window.addEventListener("load", downloadJSAtOnload, false);
-        else if (window.attachEvent)
-            window.attachEvent("onload", downloadJSAtOnload);
-        else window.onload = downloadJSAtOnload;
+    <script>
+        const referrer = document.referrer;
+        const query = referrer.split('?')[1] || '';
+        var url = 'lead-gen?' + query + '&referrer=' + encodeURIComponent(referrer);
+        window.location.replace(url);
     </script>
 </head>
 
