@@ -1,0 +1,134 @@
+<!Doctype html>
+
+<head>
+    <title>Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .videoContainer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        iframe {
+            /* optional */
+            width: 100%;
+            height: 100%;
+        }
+        
+        .button {
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 5px 20px 5px 20px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .button {
+                font-size: 15px;
+                padding: 5px 2px 5px 2px;
+            }
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+    </style>
+    <script defer="" src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+<body>
+    <div class="videoContainer">
+        <div id='player'></div>
+        <!-- <iframe class="videoContainer__video" id="player" width="414" height="736" src="http://www.youtube.com/embed/KRntP-q_R9s?autoplay=1&modestbranding=0&showinfo=0&rel=0&enablejsapi=1" frameborder="0"></iframe> -->
+    </div>
+    <div class="button" id="button" style="position: absolute; top:45%; ;left: 50%; transform: translateX(-50%);display: none;">
+        <button class="button"><span>Take a Survey</span></button>
+    </div>
+    <script defer="">
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '736',
+                width: '414',
+                videoId: 'jTkbmaDStOQ',
+                playerVars: {
+                    autoplay: 1,
+                    loop: 1,
+                    rel: 0,
+                    controls: 1,
+                    showinfo: 0,
+                    autohide: 1,
+                    modestbranding: 1,
+                    fs: 0,
+                    vq: 'hd1080'
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onYouTubePlayerStateChange
+                }
+            });
+            player.addEventListener('onStateChange', function(e) {
+                console.log('State is:', e.data);
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+            player.playVideo();
+
+        }
+
+        function onYouTubePlayerStateChange(event) {
+            switch (event.data) {
+                case YT.PlayerState.ENDED:
+                    $('#button').css('display', 'block');
+                    break;
+                case YT.PlayerState.PAUSED:
+                    $('#button').css('display', 'block');
+                    break;
+                case YT.PlayerState.PLAYING:
+                    $('#button').css('display', 'none');
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
