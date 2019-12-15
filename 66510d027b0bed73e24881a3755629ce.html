@@ -41,8 +41,14 @@
         
         @media screen and (max-width: 600px) {
             .button {
-                font-size: 15px;
+                font-size: 25px;
                 padding: 5px 2px 5px 2px;
+            }
+        }
+        
+        @media screen and (max-width: 360px) {
+            .button {
+                font-size: 22px;
             }
         }
         
@@ -79,6 +85,7 @@
         <div id='player'></div>
         <!-- <iframe class="videoContainer__video" id="player" width="414" height="736" src="http://www.youtube.com/embed/KRntP-q_R9s?autoplay=1&modestbranding=0&showinfo=0&rel=0&enablejsapi=1" frameborder="0"></iframe> -->
     </div>
+    <!-- <div calss="overlay" id="overlay" style="position: absolute; width:100%;height:100%;top:0;left:0;background: #393636;display: none;"></div> -->
     <div class="button" id="button" style="position: absolute; top:45%; ;left: 50%; transform: translateX(-50%);display: none;">
         <button class="button"><span>Take a Survey</span></button>
     </div>
@@ -87,10 +94,10 @@
             player = new YT.Player('player', {
                 height: '736',
                 width: '414',
-                videoId: 'jTkbmaDStOQ',
+                videoId: 'lpEoiSQVwM4',
                 playerVars: {
                     autoplay: 1,
-                    loop: 1,
+                    loop: 0,
                     rel: 0,
                     controls: 1,
                     showinfo: 0,
@@ -111,7 +118,6 @@
 
         function onPlayerReady(event) {
             event.target.playVideo();
-            player.playVideo();
 
         }
 
@@ -122,12 +128,18 @@
                     break;
                 case YT.PlayerState.PAUSED:
                     $('#button').css('display', 'block');
+                    // $('#overlay').css('display', 'block');
                     break;
                 case YT.PlayerState.PLAYING:
                     $('#button').css('display', 'none');
                     break;
             }
         }
+
+        $("#button").click(function() {
+            // $('#overlay').css('display', 'none');
+            player.playVideo();
+        });
     </script>
 </body>
 
