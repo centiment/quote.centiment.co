@@ -85,7 +85,8 @@
         <div id='player'></div>
         <!-- <iframe class="videoContainer__video" id="player" width="414" height="736" src="http://www.youtube.com/embed/KRntP-q_R9s?autoplay=1&modestbranding=0&showinfo=0&rel=0&enablejsapi=1" frameborder="0"></iframe> -->
     </div>
-    <!-- <div calss="overlay" id="overlay" style="position: absolute; width:100%;height:100%;top:0;left:0;background: #393636;display: none;"></div> -->
+    <div calss="overlay" id="overlay" style="position: absolute; width:100%;height:100%;top:0;left:0;background: #4d4949 ;display: none;"></div>
+    <!-- #4d4949 #FFEEB5 -->
     <div class="button" id="button" style="position: absolute; top:45%; ;left: 50%; transform: translateX(-50%);display: none;">
         <button class="button"><span>Take a Survey</span></button>
     </div>
@@ -125,6 +126,7 @@
             switch (event.data) {
                 case YT.PlayerState.ENDED:
                     $('#button').css('display', 'block');
+                    $('#overlay').css('display', 'block');
                     break;
                 case YT.PlayerState.PAUSED:
                     $('#button').css('display', 'block');
@@ -132,13 +134,14 @@
                     break;
                 case YT.PlayerState.PLAYING:
                     $('#button').css('display', 'none');
+                    $('#overlay').css('display', 'none');
                     break;
             }
         }
 
-        $("#button").click(function() {
-            // $('#overlay').css('display', 'none');
-            // player.playVideo();
+        $("#overlay").click(function() {
+            $('#overlay').css('display', 'none');
+            player.playVideo();
         });
     </script>
 </body>
