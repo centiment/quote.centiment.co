@@ -108,7 +108,10 @@
             query += (urlParams.get('referrer')) ? ("referrer=" + encodeURIComponent(urlParams.get('referrer')) + "&") : ("");
             query += (urlParams.get('gclid')) ? ("gclid=" + urlParams.get('gclid')) : ("");
             var url = '../lead-gen/?' + query;
-            window.location.replace(url);
+            setTimeout(function() {
+                window.location.replace(url);
+            }, 800);
+
         }
         if (window.addEventListener)
             window.addEventListener("load", downloadJSAtOnload, false);
