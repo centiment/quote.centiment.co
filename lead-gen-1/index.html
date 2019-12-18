@@ -87,7 +87,7 @@
     <script type="text/javascript" id="hs-script-loader" async=false defer=false src="https://js.hs-scripts.com/1998880.js"></script>
     <!--  End of HubSpot Embed Code  -->
     <script type="text/javascript">
-        $.getScript("https://js.hs-scripts.com/1998880.js", function() {
+        function downloadJSAtOnload() {
             var original_url = $('#5d8b102a3d530177e478d45a').attr('data-url');
             var hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
             var hutk_value = '';
@@ -102,7 +102,12 @@
                 "&page=" + encodeURIComponent(urlParams.get('referrer')); // + "&" + urlExtra; 
             $('#5d8b102a3d530177e478d45a').attr('data-url', original_url);
             initIframe('5d8b102a3d530177e478d45a');
-        });
+        }
+        if (window.addEventListener)
+            window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", downloadJSAtOnload);
+        else window.onload = downloadJSAtOnload;
     </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG3RXX"
