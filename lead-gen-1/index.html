@@ -91,14 +91,12 @@
             var original_url = $('#5d8b102a3d530177e478d45a').attr('data-url');
             var hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
             var hutk_value = '';
-            var flag = 0;
-            while (hutk_matches) {
-                setTimeout(function() {
-                    hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
-                    if (flag == 30) break;
-                    flag++;
-                }, 100);
-
+            var start = new Date();
+            while (!hutk_matches) {
+                hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
+                var now = new Date();
+                var diff = Math.abs(start - now);
+                if (diff > 1000) break;
             }
             if (hutk_matches) hutk_value = hutk_matches[2];
             const urlParams = new URLSearchParams(window.location.search);
