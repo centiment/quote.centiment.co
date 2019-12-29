@@ -109,7 +109,7 @@
             var hutk_value = getCookie('hubspotutk');
             var start = new Date();
             while (!hutk_value) {
-                var hutk_value = getCookie('hubspotutk');
+                hutk_value = getCookie('hubspotutk');
                 var now = new Date();
                 var diff = Math.abs(start - now);
                 if (diff > 5000) break;
