@@ -86,19 +86,34 @@
     <!--  Start of HubSpot Embed Code  -->
     <script type="text/javascript" id="hs-script-loader" async=false defer=false src="https://js.hs-scripts.com/1998880.js"></script>
     <!--  End of HubSpot Embed Code  -->
+    <script>
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+    </script>
     <script type="text/javascript">
         function downloadJSAtOnload() {
             var original_url = $('#5d8b102a3d530177e478d45a').attr('data-url');
-            var hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
-            var hutk_value = '';
+            var hutk_value = getCookie('hubspotutk');
             var start = new Date();
-            while (!hutk_matches) {
-                hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
+            while (!hutk_value) {
+                var hutk_value = getCookie('hubspotutk');
                 var now = new Date();
                 var diff = Math.abs(start - now);
                 if (diff > 5000) break;
             }
-            if (hutk_matches) hutk_value = hutk_matches[2];
             const urlParams = new URLSearchParams(window.location.search);
             const gclid_value = urlParams.get('gclid');
             const utm_matchtype_value = urlParams.get('utm_matchtype');
