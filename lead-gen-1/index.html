@@ -95,9 +95,10 @@
             while (!hutk_matches) {
                 setTimeout(function() {
                     hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
+                    if (flag == 30) break;
+                    flag++;
                 }, 100);
-                flag++;
-                if (flag == 30) break;
+
             }
             if (hutk_matches) hutk_value = hutk_matches[2];
             const urlParams = new URLSearchParams(window.location.search);
