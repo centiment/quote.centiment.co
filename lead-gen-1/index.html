@@ -96,7 +96,7 @@
                 hutk_matches = document.cookie.match(new RegExp('(^| )' + 'hubspotutk' + '=([^;]+)'));
                 var now = new Date();
                 var diff = Math.abs(start - now);
-                if (diff > 1000) break;
+                if (diff > 5000) break;
             }
             if (hutk_matches) hutk_value = hutk_matches[2];
             const urlParams = new URLSearchParams(window.location.search);
