@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-    <script>
+    <script type="text/javascript">
         function getCookie(cname) {
             var name = cname + "=";
             var decodedCookie = decodeURIComponent(document.cookie);
@@ -102,35 +102,30 @@
             }
             return "";
         }
-    </script>
-    <script type="text/javascript">
+
         function downloadJSAtOnload() {
-            var original_url = $('#5d8b102a3d530177e478d45a').attr('data-url');
-            var hutk_value = getCookie('hubspotutk');
-            var start = new Date();
-            while (!hutk_value) {
-                hutk_value = getCookie('hubspotutk');
-                console.log(hutk_value);
-                var now = new Date();
-                var diff = Math.abs(start - now);
-                if (diff > 5000) break;
-            }
-            const urlParams = new URLSearchParams(window.location.search);
-            const gclid_value = urlParams.get('gclid');
-            const utm_matchtype_value = urlParams.get('utm_matchtype');
-            original_url += "&hutk=" + hutk_value +
-                "&gclid=" + gclid_value +
-                "&utm_matchtype=" + utm_matchtype_value +
-                "&name=USA" +
-                "&page=" + encodeURIComponent(urlParams.get('referrer')); // + "&" + urlExtra; 
-            $('#5d8b102a3d530177e478d45a').attr('data-url', original_url);
-            initIframe('5d8b102a3d530177e478d45a');
+            setTimeout(function() {
+                var hutk_value = getCookie('hubspotutk');
+                const urlParams = new URLSearchParams(window.location.search);
+                const gclid_value = urlParams.get('gclid');
+                const utm_matchtype_value = urlParams.get('utm_matchtype');
+                original_url += "&hutk=" + hutk_value +
+                    "&gclid=" + gclid_value +
+                    "&utm_matchtype=" + utm_matchtype_value +
+                    "&name=USA" +
+                    "&page=" + encodeURIComponent(urlParams.get('referrer')); // + "&" + urlExtra; 
+                $('#5d8b102a3d530177e478d45a').attr('data-url', original_url);
+                initIframe('5d8b102a3d530177e478d45a');
+            }, 1000);
+
         }
+
         if (window.addEventListener)
             window.addEventListener("load", downloadJSAtOnload, false);
         else if (window.attachEvent)
             window.attachEvent("onload", downloadJSAtOnload);
         else window.onload = downloadJSAtOnload;
+        var original_url = $('#5d8b102a3d530177e478d45a').attr('data-url');
     </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG3RXX"
