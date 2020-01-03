@@ -202,17 +202,17 @@
             console.log(formData)
             $.ajax({
                 type: "POST",
-                url: "serverUrl",
+                url: "https://hooks.zapier.com/hooks/catch/998439/otfg72c/",
+                contentType: "application/json; charset=utf-8",
                 data: formData,
+                dataType: "json",
                 success: function() {
                     alert('Success')
                 },
                 error: function(e) {
                     alert('Error')
                     console.log(e);
-                },
-                dataType: "json",
-                contentType: "application/json"
+                }
             });
 
             $('#regForm').submit(function(e) {
