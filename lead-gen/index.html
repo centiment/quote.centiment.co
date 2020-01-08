@@ -10,7 +10,135 @@
     <link rel="stylesheet" href="https://use.typekit.net/psb2gph.css">
     <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link href="images/webclip.png" rel="apple-touch-icon">
-
+    <style>
+        @media screen and (max-width:421px) {
+            .heading {
+                max-width: 80%
+            }
+        }
+        
+        @media screen and (max-width:389px) {
+            .heading {
+                max-width: 67%
+            }
+        }
+        
+        @media screen and (max-width:351px) {
+            .heading {
+                max-width: 80%
+            }
+        }
+        
+        .hero {
+            font-family: futura-pt, sans-serif;
+            font-size: 36px;
+            padding-bottom: 10px
+        }
+        
+        @media screen and (max-width:990px) {
+            .hero {
+                font-size: 28px;
+                line-height: 1.2em
+            }
+        }
+        
+        @media screen and (max-width:758px) {
+            .hero {
+                font-size: 25px;
+                line-height: 1.2em
+            }
+        }
+        
+        @media screen and (max-width:658px) {
+            .hero {
+                font-size: 20px;
+                line-height: 1.2em
+            }
+        }
+        
+        @keyframes placeHolderShimmer {
+            0% {
+                background-position: -468px 0
+            }
+            100% {
+                background-position: 468px 0
+            }
+        }
+        
+        .loader {
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: placeHolderShimmer;
+            animation-timing-function: linear;
+            background: #f6f7f8;
+            background: linear-gradient(to right, #eee 8%, #ddd 18%, #eee 33%);
+            background-size: 1000px 104px;
+            height: 500px;
+            position: relative;
+            overflow: hidden
+        }
+        
+        .line {
+            border: 3px solid #00c262;
+            width: 45%;
+            text-align: center;
+            margin: auto;
+            border-radius: 10px;
+            background-color: #00c262
+        }
+        
+        .horizontal-bar {
+            position: absolute;
+            background-color: #fff;
+            width: 100%;
+            height: 210px
+        }
+        
+        .top-bar {
+            top: 0
+        }
+        
+        .bottom-bar {
+            bottom: 0
+        }
+        
+        .vertical-bar {
+            background-color: #fff;
+            position: absolute;
+            width: 30%;
+            height: 100%
+        }
+        
+        @media screen and (max-width:990px) {
+            .vertical-bar {
+                width: 10%
+            }
+        }
+        
+        @media screen and (max-width:760px) {
+            .vertical-bar {
+                width: 16%
+            }
+        }
+        
+        .left-bar {
+            left: 0
+        }
+        
+        .right-bar {
+            right: 0
+        }
+        
+        .middle-bar {
+            position: absolute;
+            top: 237px;
+            height: 26px;
+            width: 100%;
+            background: #fff;
+            left: 0
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!--  Start of HubSpot Embed Code  -->
@@ -58,6 +186,13 @@
             <div class="flex-container">
                 <div class="form" style="max-width: 1200px; width: 75vw; margin: 40px 0 20px 0; ">
                     <div>
+                        <div class="loader">
+                            <div class="top-bar horizontal-bar"></div>
+                            <div class="bottom-bar horizontal-bar"></div>
+                            <div class="left-bar vertical-bar"></div>
+                            <div class="right-bar vertical-bar"></div>
+                            <div class="middle-bar"></div>
+                        </div>
                         <div class='op-interactive' id='5d8b102a3d530177e478d45a' data-url='https://centiment.outgrow.us/5d8b102a3d530177e478d45a?vHeight=1' data-width='100%'></div>
                         <script src='//dyv6f9ner1ir9.cloudfront.net/assets/js/nloader.js'></script>
                     </div>
@@ -102,6 +237,9 @@
                     "&page=" + encodeURIComponent(urlParams.get('referrer')); // + "&" + urlExtra; 
                 $('#5d8b102a3d530177e478d45a').attr('data-url', original_url);
                 initIframe('5d8b102a3d530177e478d45a');
+                setTimeout(function() {
+                    $('.loader').css("display", "none");
+                }, 1500);
             }, 0);
 
         }
