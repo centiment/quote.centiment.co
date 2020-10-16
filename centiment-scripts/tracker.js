@@ -59,7 +59,7 @@ function trackingValue(cookieValue = '', queryString = location.search.slice(1))
     }
 
     //Append non-centiment referrers   
-    if (referrerDomain) {
+    if (referrerDomain && !centimentDomains.includes(referrerDomain)) {
         var referrer_item = [encodeURIComponent(referrerURL), time]
 
         if (!Array.isArray(trackerValue['centiment-referrer'])) {
