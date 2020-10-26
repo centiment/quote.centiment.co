@@ -47,6 +47,11 @@ function trackingValue(cookieValue = '', queryString = location.search.slice(1))
         });
     }
 
+    //Append Hutk
+    if(getCookie('hubspotutk')){
+        trackerValue['hutk'] = getCookie('hubspotutk')
+    }
+
     //Append centiment current URL
     if (currentURL) {
         var item = [encodeURIComponent(currentURL), time]
