@@ -92,10 +92,12 @@ function trackingValue(cookieValue = '', queryString = location.search.slice(1))
  * 
  * @param {string} value Cookie value to be set
  * 
+ * @param {string} cookie_name Cookie name to be set. Default: CentimentTracker
+ * 
  * @returns {none}
  */
-function setTrackingCookie(value) {
-    var cookie = 'CentimentTracker' + '=' + value + '; path=/; domain=.centiment.co'
+function setTrackingCookie(value, cookie_name = 'CentimentTracker' ) {
+    var cookie = cookie_name + '=' + value + '; path=/; domain=.centiment.co'
     var now = new Date()
     now.setTime(now.getTime() + 30 * 24 * 60 * 60 * 1000)
     cookie += '; expires=' + now.toUTCString()
