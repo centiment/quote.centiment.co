@@ -88,7 +88,7 @@ function trackingValue(cookieValue = '', queryString = location.search.slice(1))
 
 
 /**
- * Set CentimentTracker Cookie for 30 days
+ * Set Cookie for 30 days
  * 
  * @param {string} value Cookie value to be set
  * 
