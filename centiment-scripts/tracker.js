@@ -106,7 +106,10 @@ function setTrackingCookie(value, cookie_name = 'CentimentTracker' ) {
 
 
 var date = new Date();
-var time = date.getTime();
+var utcDate = new Date( date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds() );
+var time = Math.floor(utcDate.getTime())
+//var time = date.getTime();
+
 var reservedKeys = ["flow-tracker", "centiment-referrer"];
 
 var centimentDomains = ["www.centiment.co", "centiment.co", "quote.centiment.co", "temp.centiment.co", "app.centiment.co"]
