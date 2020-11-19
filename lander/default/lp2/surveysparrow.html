@@ -1148,8 +1148,10 @@ input[type=range]:focus::-ms-fill-upper {
                           <div class="sp-48"></div>
                         </div>
                         <div class="reset-margin-u w-form">
-                          <form data-name="Survey" name="wf-form-Survey" id="wf-form-Survey" action="https://app.centiment.co/sign-up/email?contact-source=lp-create-survey" class="w-clearfix">
-                            <div class="square-position"><input type="text" class="fancy-text-input w-input" maxlength="256" name="email" data-name="email" placeholder="Your email address" id="email-survey">
+                          <form data-name="Survey" name="wf-form-Survey" id="wf-form-Survey" action="https://app.centiment.co/sign-up/email" class="w-clearfix">
+                            <div class="square-position">
+                                <input type="text" class="fancy-text-input w-input" maxlength="256" name="email" data-name="email" placeholder="Your email address" id="email-survey">
+                                <input type="text" class="fancy-text-input w-input" maxlength="256" name="contact-source" data-name="contact-source" id="contact-source"  value="lp-create-survey" style="display: none">
                               <div class="square-coords is_-top-right">
                                 <div class="square-position">
                                   <div class="primary">
@@ -1830,7 +1832,9 @@ input[type=range]:focus::-ms-fill-upper {
                 <div class="sp-40"></div>
                 <div class="square-position">
                   <div class="reset-margin-u w-form">
-                    <form data-name="CTA form" name="wf-form-CTA-form" action="https://app.centiment.co/sign-up/email?contact-source=lp-footer" id="cta-form-footer" class="footer-form"><input type="email" class="fancy-text-input w-input" maxlength="256" name="email" data-name="email" placeholder="Your email address" id="email-footer" required="">
+                    <form data-name="CTA form" name="wf-form-CTA-form" action="https://app.centiment.co/sign-up/email" id="cta-form-footer" class="footer-form">
+                        <input type="email" class="fancy-text-input w-input" maxlength="256" name="email" data-name="email" placeholder="Your email address" id="email-footer" required="">
+                        <input type="text" class="fancy-text-input w-input" maxlength="256" name="contact-source" data-name="contact-source" id="contact-source"  value="lp-footer" style="display: none">
                       <div data-w-id="aa3c2b45-7abc-aa29-54b7-0a229b7c2842" class="relative-position-u full-height">
                         <div class="form-button---custom">
                           <a href="#" class="button is_-primary w-inline-block">
