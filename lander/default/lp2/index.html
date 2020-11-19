@@ -7,8 +7,8 @@
 <body>
     <script>
         query = window.location.href.split('?')[1];
-        url = "survey-your-target-audience";
-        if (typeof query != "undefined") url += '?indexVisit=true&' + query;
+        url = "survey-your-target-audience?indexVisit=true";
+        if (typeof query != "undefined") url += '&' + query;
         window.location.replace(url);
     </script>
 </body>
