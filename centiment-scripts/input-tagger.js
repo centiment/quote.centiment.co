@@ -17,7 +17,6 @@ var targetForm = ''
 //Hero Input
 targetForm = document.getElementById("wf-form-Hero")
 if (targetForm) {
-    
     inputCustom.value = "cta-email-hero";
     targetForm.appendChild(inputCustom.cloneNode());
 }
