@@ -28,10 +28,10 @@ if (targetForm) {
 }
 
 //Survey Tool
-if (LocPath == '/margin-of-error') {
-    var targetForm = document.getElementById("wf-form-Sidebar")
+if (LocPath == '/survey-tool') {
+    var targetForm = document.getElementById("cta-form-surveytool")
     if (targetForm) {
-        inputCustom.value = "cta-email-sidebar";
+        inputCustom.value = "cta-email-surveytool";
         targetForm.appendChild(inputCustom);
     }
 }
