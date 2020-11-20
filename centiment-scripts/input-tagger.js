@@ -7,7 +7,7 @@
 
 
 //Initialize params
-var path = window.location.pathname;
+var LocPath = window.location.pathname;
 var inputCustom = document.createElement("input");
 inputCustom.type = "text";
 inputCustom.name = "contact-source"
@@ -27,8 +27,17 @@ if (targetForm) {
     targetForm.appendChild(inputCustom);
 }
 
+//Survey Tool
+if (LocPath == '/margin-of-error') {
+    var targetForm = document.getElementById("wf-form-Sidebar")
+    if (targetForm) {
+        inputCustom.value = "cta-email-sidebar";
+        targetForm.appendChild(inputCustom);
+    }
+}
+
 //Audience Panel
-if (path == '/audience-panel') {
+if (LocPath == '/audience-panel') {
     var targetForm = document.getElementById("wf-form-Survey")
     if (targetForm) {
         inputCustom.value = "cta-email-audiencePanel";
@@ -37,7 +46,7 @@ if (path == '/audience-panel') {
 }
 
 //Customers
-if (path == '/audience-panel') {
+if (LocPath == '/customers') {
     var targetForm = document.getElementById("wf-form-Customers")
     if (targetForm) {
         inputCustom.value = "cta-email-customers";
@@ -48,7 +57,7 @@ if (path == '/audience-panel') {
 
 
 //MOE
-if (path == '/audience-panel') {
+if (LocPath == '/margin-of-error') {
     var targetForm = document.getElementById("wf-form-Sidebar")
     if (targetForm) {
         inputCustom.value = "cta-email-sidebar";
