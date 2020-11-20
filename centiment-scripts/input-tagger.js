@@ -18,14 +18,14 @@ inputCustom.style = "display: none";
 targetForm = document.getElementById("wf-form-Hero")
 if (targetForm) {
     inputCustom.value = "cta-email-hero";
-    targetForm.appendChild(inputCustom);
+    document.getElementById("wf-form-Hero").appendChild(inputCustom);
 }
 
 //Form Input
 targetForm = document.getElementById("cta-form-footer")
 if (targetForm) {
     inputCustom.value = "cta-form-footer";
-    targetForm.appendChild(inputCustom);
+    document.getElementById("cta-form-footer").appendChild(inputCustom);
 }
 
 //Survey Tool
@@ -33,7 +33,7 @@ if (LocPath == '/survey-tool') {
     targetForm = document.getElementById("cta-form-surveytool")
     if (targetForm) {
         inputCustom.value = "cta-email-surveytool";
-        targetForm.appendChild(inputCustom);
+        document.getElementById("cta-form-surveytool").appendChild(inputCustom);
     }
 }
 
@@ -42,7 +42,7 @@ if (LocPath == '/audience-panel') {
     targetForm = document.getElementById("wf-form-Survey")
     if (targetForm) {
         inputCustom.value = "cta-email-audiencePanel";
-        targetForm.appendChild(inputCustom);
+        document.getElementById("wf-form-Survey").appendChild(inputCustom);
     }
 }
 
@@ -51,7 +51,7 @@ if (LocPath == '/customers') {
     targetForm = document.getElementById("wf-form-Customers")
     if (targetForm) {
         inputCustom.value = "cta-email-customers";
-        targetForm.appendChild(inputCustom);
+        document.getElementById("wf-form-Customers").appendChild(inputCustom);
     }
 
 }
