@@ -56,7 +56,6 @@ if (LocPath == '/customers') {
 
 }
 
-
 //MOE
 if (LocPath == '/margin-of-error') {
     targetForm = document.getElementById("wf-form-Sidebar")
