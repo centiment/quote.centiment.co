@@ -53,7 +53,7 @@ function trackingValue(cookieValue = '', queryString = location.search.slice(1))
             var value = decodeURIComponent(pair[1] || '');
 
             if (!reservedKeys.includes(key)
-                && (Object.keys(trackerValue).length < 10 || trackerValue.hasOwnProperty(key) || key.includes("utm_") ||  key.includes("gclid"))) {
+                && (Object.keys(trackerValue).length < 10 || trackerValue.hasOwnProperty(key) || key.includes("utm_") || key.includes("gclid"))) {
                 trackerValue[key] = value
             }
         });
