@@ -1685,22 +1685,6 @@
       <script>
          $("textarea").keypress(function(t){$(this).focus(),"Enter"==t.key&&$(this).val($(this).val()+"\n")});
       </script>
-      <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-      <script>
-         if(Cookies.get('CentimentTracker')){
-               $('.centiment-tracker').val(Cookies.get('CentimentTracker'));
-             }
-             else{
-               $('.centiment-tracker').val('{}');
-             }
-             $('.form-url').val(window.location.href);
-             fetch('https://api.ipdata.co/?api-key=136f44c4f58d839c220552d7f6d1ccf79c9eec592bc41fc5b11ff00c&fields=ip,city,country_name')
-             .then(resp => resp.json())
-             .then(data => {
-               $('.ip-address').val(data.ip);
-               $('.geo-location').val(`${data.city + ', ' + data.country_name}`);
-             });
-      </script>
       <script>
          //GA enhanced
          let inputData = {
