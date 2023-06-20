@@ -1678,9 +1678,9 @@
          display: inline-block;
          }
       </style>
+      <script src="js/forms.js" type="application/javascript"></script>
       <script src="./js/webflow.js" type="text/javascript"></script>
       <script src="https://assets.centiment.co/scripts/input-tagger.js" type="application/javascript"></script>
-      <script src="https://uploads-ssl.webflow.com/5e904c8f28e5d060f85ae007/5f51d7273dfe0d14a5b2d70f_centiment-responses.txt" type="application/javascript"></script>
       <script>
          $("textarea").keypress(function(t){$(this).focus(),"Enter"==t.key&&$(this).val($(this).val()+"\n")});
       </script>
@@ -1710,6 +1710,5 @@
          $('#last-name').change((e) => { updateGA_Data("last_name", e.target.value); })
          $('#phone').change((e) => { updateGA_Data("phone", e.target.value); })
       </script>
-        <script src="js/forms.js" type="application/javascript"></script>
    </body>
 </html>
