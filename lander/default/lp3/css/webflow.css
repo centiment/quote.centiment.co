@@ -1820,3 +1820,38 @@ textarea.w-select {
 .wf-layout-layout {
   display: grid;
 }
+
+.button---content---text.is_-fore {
+    transition: all 200ms ease;
+}
+.button---content:hover .button---content---text.is_-fore {
+    transform: translate3d(0px, 0px, 0px) scale3d(1.05, 1.05, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.button---bg.is_-overlay {
+    /* z-index: 4; */
+    transition: all 200ms ease;
+}
+.button---bg.is_-overlay:hover {
+    opacity: 1;
+}
+.square-position:hover .button---bg.is_-overlay {
+    opacity: 1;
+}
+.bullet-link.w-inline-block:hover {
+    color: rgb(78, 90, 249);
+}
+.bullet-link.w-inline-block .arrow.is_-short {
+    transition: all 50ms ease;
+}
+.bullet-link.w-inline-block:hover .arrow.is_-short {
+    transform: translate3d(24px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.bullet-link.w-inline-block .heading-line-height {
+    transition: all 50ms ease;
+}
+.bullet-link.w-inline-block:hover .heading-line-height {
+    transform: translate3d(12px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
