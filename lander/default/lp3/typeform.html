@@ -477,7 +477,7 @@
             <nav role="navigation" class="navmenu w-nav-menu">
                <div class="navscroll">
                   <a href="https://www.centiment.co/" target="_blank" class="brand hide-u_tb w-nav-brand"><img src="images/centiment-logo-color.svg" alt=""></a>
-                  <div id="btns-logged-out" class="navmenu---buttons">
+                  <div class="navmenu---buttons">
                      <div data-hover="true" data-delay="0" class="navlink is_-dd is__-contact w-dropdown">
                         <div class="navlink---dd is_-contact is__-secondary-cta w-dropdown-toggle">
                            <div class="inline-block-u reset-line-height-u">
@@ -530,7 +530,7 @@
                      <div class="sp-h-24"></div>
                      <div class="reset-line-height-u">
                         <div class="inline-block-u">
-                           <a href="https://www.centiment.co/forms/audience-request-accomplish?version=0" class="button is_-outline is__-primary w-inline-block">
+                           <a href="https://www.centiment.co/forms/audience-request-accomplish?version=0" class="button is_-outline is__-primary w-inline-block" id="btns-logged-out">
                               <div class="relative-position-u">
                                  <div class="button---content is_-small is__-outline">
                                     <div class="button---content---text is_-fore">Get pricing</div>
@@ -540,26 +540,22 @@
                                  </div>
                               </div>
                            </a>
+                           <a href="https://app.centiment.co/" class="button is_-outline is__-primary w-inline-block" id="btns-logged-in">
+                              <div class="relative-position-u">
+                                 <div class="button---content is_-small is__-outline flex-u flex-middle-u">
+                                    <img src="images/sm-icon-dashboard.svg" alt="">
+                                    <div class="sp-h-8"></div>
+                                    <div class="button---content---text is_-fore">Dashboard</div>
+                                 </div>
+                              </div>
+                           </a>
                         </div>
-                     </div>
-                  </div>
-                  <div id="btns-logged-in" class="navmenu---buttons is_-dashboard">
-                     <div class="inline-block-u">
-                        <a href="https://app.centiment.co/" target="_blank" class="button is_-xsmall is_-outline is__-primary w-inline-block">
-                           <div class="flex-u flex-middle-u">
-                              <img src="images/sm-icon-dashboard.svg" alt="">
-                              <div class="sp-h-8"></div>
-                              <div>Dashboard</div>
-                           </div>
-                        </a>
                      </div>
                   </div>
                   <div class="html-embed---nav-btns w-embed w-script">
                      <script>
-                        if(isLoggedIn){
-                        	document.getElementById("btns-logged-out").style.display = "none";
-                          document.getElementById("btns-logged-in").style.display = "block";
-                        }
+                        document.getElementById("btns-logged-out").style.display = !isLoggedIn ? "none" : "block";
+                        document.getElementById("btns-logged-in").style.display =  !isLoggedIn ? "block" : "none";
                      </script>
                   </div>
                </div>
