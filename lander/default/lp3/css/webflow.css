@@ -1855,3 +1855,10 @@ textarea.w-select {
     transform: translate3d(12px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
 }
+
+@media (max-width:1673px) and  (min-width:991px) {
+  .contact-dropdown
+  {
+      left: -150% !important;
+  }
+}      
