@@ -4,6 +4,7 @@
         Test
         <div id="container"></div>
         <div id="result"></div>
+        <div id="error-log" style="white-space: pre-wrap; color: red;"></div>
     </body>
     
 <script>
@@ -33,5 +34,42 @@
     };
 
     document.head.appendChild(script);
+</script>
+<script>
+    const errorLogDiv = document.getElementById("error-log");
+
+    // Append message to HTML
+    function logToHtml(type, msg) {
+        const entry = `[${type.toUpperCase()}] ${msg}\n`;
+        errorLogDiv.textContent += entry;
+    }
+
+    // Capture console.error, console.warn, etc.
+    ['log', 'warn', 'error'].forEach(function (method) {
+        const original = console[method];
+        console[method] = function (...args) {
+            logToHtml(method, args.join(' '));
+            original.apply(console, args); // Still output to actual console
+        };
+    });
+
+    // Capture uncaught JS errors
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+        const message = `${msg} at ${url}:${lineNo}:${columnNo}`;
+        logToHtml("onerror", message);
+        return false; // Let browser show default error too
+    };
+
+    // Capture unhandled Promise rejections
+    window.addEventListener("unhandledrejection", function (event) {
+        logToHtml("unhandledrejection", event.reason);
+    });
+
+    // Trigger test errors
+    console.log("This is a test log");
+    console.warn("This is a test warning");
+    console.error("This is a test error");
+    throw new Error("Test thrown error");
+    Promise.reject("Test unhandled rejection");
 </script>
 </html>
