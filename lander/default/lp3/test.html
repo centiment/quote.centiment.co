@@ -8,7 +8,7 @@
     </body>
     <script>
     const script = document.createElement("script");
-    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback";
+    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onloadTurnstileCallback";
     script.async = true;
     script.defer = true;
     document.getElementById("result").innerHTML = `Loading Turnstile script.`;
@@ -25,6 +25,10 @@
                 console.log(`Challenge Success ${token}`);
                 document.getElementById("result").innerHTML = `v4 Token: ${token}`;
             },
+            "error-callback": function (error) {                
+                console.log(`Challenge Error ${error}`);
+                document.getElementById("result").innerHTML = `v4 TS Error: ${error}`;
+            }
         });
     } catch (error) {
                 document.getElementById("result").innerHTML = `Error`;
