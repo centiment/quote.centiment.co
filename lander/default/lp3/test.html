@@ -1,6 +1,6 @@
 <html>
     <script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onloadTurnstileCallback"
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
   defer
 ></script>
 
@@ -10,14 +10,18 @@
         <div id="result"></div>
     </body>
     <script>
-        window.onloadTurnstileCallback = function () {
-  turnstile.render("#container", {
-    sitekey: "0x4AAAAAABnXznZ59blJHWDb",
-    callback: function (token) {
-      console.log(`Challenge Success ${token}`);
-      document.getElementById("result").innerHTML = `Token: ${token}`;
-    },
-  });
+      window.onloadTurnstileCallback = function () {
+    try {
+        turnstile.render("#container", {
+            sitekey: "0x4AAAAAABnXznZ59blJHWDb",
+            callback: function (token) {
+                console.log(`Challenge Success ${token}`);
+                document.getElementById("result").innerHTML = `v1 Token: ${token}`;
+            },
+        });
+    } catch (error) {
+                document.getElementById("result").innerHTML = `Error`;
+    }
 };
     </script>
 </html>
