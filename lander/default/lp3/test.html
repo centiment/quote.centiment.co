@@ -1,0 +1,23 @@
+<html>
+    <script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onloadTurnstileCallback"
+  defer
+></script>
+
+    <body>
+        Test
+        <div id="container"></div>
+        <div id="result"></div>
+    </body>
+    <script>
+        window.onloadTurnstileCallback = function () {
+  turnstile.render("#container", {
+    sitekey: "0x4AAAAAABnXznZ59blJHWDb",
+    callback: function (token) {
+      console.log(`Challenge Success ${token}`);
+      document.getElementById("result").innerHTML = `Token: ${token}`;
+    },
+  });
+};
+    </script>
+</html>
