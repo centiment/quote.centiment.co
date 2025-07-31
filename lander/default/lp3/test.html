@@ -1,8 +1,16 @@
 <html>
-    <script
-  src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
-  defer
-></script>
+<script>
+    const script = document.createElement("script");
+    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback";
+    script.async = true;
+    script.defer = true;
+
+    script.onerror = function () {
+     document.getElementById("result").innerHTML = `Failed to load Turnstile script.`;
+    };
+
+    document.head.appendChild(script);
+</script>
 
     <body>
         Test
@@ -16,7 +24,7 @@
             sitekey: "0x4AAAAAABnXznZ59blJHWDb",
             callback: function (token) {
                 console.log(`Challenge Success ${token}`);
-                document.getElementById("result").innerHTML = `v1 Token: ${token}`;
+                document.getElementById("result").innerHTML = `v2 Token: ${token}`;
             },
         });
     } catch (error) {
