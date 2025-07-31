@@ -16,7 +16,7 @@
      document.getElementById("result").innerHTML = `Failed to load Turnstile script.`;
     };
      script.onload  = function () {
-     document.getElementById("result").innerHTML = `v4 Loaded.`;
+     document.getElementById("result").innerHTML = `v5 Loaded.`;
      window.onloadTurnstileCallback = function () {
     try {
         turnstile.render("#container", {
@@ -36,11 +36,11 @@
     </script>
     <script>
         (function () {
-            const logDiv = document.getElementById('log-errors');
+            const logDiv = document.getElementById('error-log');
 
             function logToPage(type, msg) {
                 const entry = `[${type.toUpperCase()}] ${msg}\n`;
-                logDiv.textContent += entry;
+                logDiv.textContent += entry + '\n\n\n';
             }
 
             // Override console methods
