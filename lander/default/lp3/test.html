@@ -15,6 +15,9 @@
     script.onerror = function () {
      document.getElementById("result").innerHTML = `Failed to load Turnstile script.`;
     };
+     script.onload  = function () {
+     document.getElementById("result").innerHTML = `Loaded.`;
+    };
 
     document.head.appendChild(script);
 </script>
