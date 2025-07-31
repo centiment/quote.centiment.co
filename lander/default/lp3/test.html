@@ -17,12 +17,7 @@
     };
      script.onload  = function () {
      document.getElementById("result").innerHTML = `Loaded.`;
-    };
-
-    document.head.appendChild(script);
-</script>
-    <script>
-      window.onloadTurnstileCallback = function () {
+     window.onloadTurnstileCallback = function () {
     try {
         turnstile.render("#container", {
             sitekey: "0x4AAAAAABnXznZ59blJHWDb",
@@ -35,5 +30,8 @@
                 document.getElementById("result").innerHTML = `Error`;
     }
 };
-    </script>
+    };
+
+    document.head.appendChild(script);
+</script>
 </html>
