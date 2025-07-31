@@ -1,22 +1,23 @@
 <html>
+    <head></head>
+    <body>
+        Test
+        <div id="container"></div>
+        <div id="result"></div>
+    </body>
+    
 <script>
     const script = document.createElement("script");
     script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback";
     script.async = true;
     script.defer = true;
-
+    document.getElementById("result").innerHTML = `Loading Turnstile script.`;
     script.onerror = function () {
      document.getElementById("result").innerHTML = `Failed to load Turnstile script.`;
     };
 
     document.head.appendChild(script);
 </script>
-
-    <body>
-        Test
-        <div id="container"></div>
-        <div id="result"></div>
-    </body>
     <script>
       window.onloadTurnstileCallback = function () {
     try {
@@ -24,7 +25,7 @@
             sitekey: "0x4AAAAAABnXznZ59blJHWDb",
             callback: function (token) {
                 console.log(`Challenge Success ${token}`);
-                document.getElementById("result").innerHTML = `v2 Token: ${token}`;
+                document.getElementById("result").innerHTML = `v4 Token: ${token}`;
             },
         });
     } catch (error) {
