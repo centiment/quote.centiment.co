@@ -16,7 +16,7 @@
      document.getElementById("result").innerHTML = `Failed to load Turnstile script.`;
     };
      script.onload  = function () {
-     document.getElementById("result").innerHTML = `Loaded.`;
+     document.getElementById("result").innerHTML = `v4 Loaded.`;
      window.onloadTurnstileCallback = function () {
     try {
         turnstile.render("#container", {
@@ -35,40 +35,34 @@
     document.head.appendChild(script);
     </script>
     <script>
-    const errorLogDiv = document.getElementById("error-log");
+        (function () {
+            const logDiv = document.getElementById('log-errors');
 
-    // Append message to HTML
-    function logToHtml(type, msg) {
-        const entry = `[${type.toUpperCase()}] ${msg}\n`;
-        errorLogDiv.textContent += entry;
-    }
+            function logToPage(type, msg) {
+                const entry = `[${type.toUpperCase()}] ${msg}\n`;
+                logDiv.textContent += entry;
+            }
 
-    // Capture console.error, console.warn, etc.
-    ['log', 'warn', 'error'].forEach(function (method) {
-        const original = console[method];
-        console[method] = function (...args) {
-            logToHtml(method, args.join(' '));
-            original.apply(console, args); // Still output to actual console
-        };
-    });
+            // Override console methods
+            ['log', 'warn', 'error'].forEach(method => {
+                const original = console[method];
+                console[method] = function (...args) {
+                    logToPage(method, args.map(a => typeof a === 'object' ? JSON.stringify(a) : a).join(' '));
+                    original.apply(console, args);
+                };
+            });
 
-    // Capture uncaught JS errors
-    window.onerror = function (msg, url, lineNo, columnNo, error) {
-        const message = `${msg} at ${url}:${lineNo}:${columnNo} ${error}`;
-        logToHtml("onerror", message);
-        return false; // Let browser show default error too
-    };
+            // Catch uncaught errors
+            window.onerror = function (msg, url, line, col, err) {
+                const stack = err && err.stack ? `\nStack: ${err.stack}` : '';
+                logToPage("onerror", `${msg} at ${url}:${line}:${col}${stack}`);
+                return false;
+            };
 
-    // Capture unhandled Promise rejections
-    window.addEventListener("unhandledrejection", function (event) {
-        logToHtml("unhandledrejection", event.reason);
-    });
-
-    // Trigger test errors
-    console.log("This is a test log");
-    console.warn("This is a test warning");
-    console.error("This is a test error");
-    throw new Error("Test thrown error");
-    Promise.reject("Test unhandled rejection");
+            // Catch unhandled Promise rejections
+            window.addEventListener("unhandledrejection", function (event) {
+                logToPage("unhandledrejection", `${event.reason}`);
+            });
+        })();
     </script>
 </html>
